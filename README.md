@@ -18,3 +18,22 @@ The project uses a versioning strategy that is based on the [Semantic Versioning
 2. Each changelog file is named `db.changelog-<major>.<minor>.<patch>.xml`. For example, `db.changelog-1.0.0.xml`. The changelog file name is based on the version of the application. The version of the application is defined in the `pom.xml` file.
 3. Each changelog file has a changeset with an id and author attribute. The id and author attribute are used by Liquibase to track which changes have been applied to the database and which have not.
 4. Each changeset has a comment that describes the changeset.
+
+### Liquibase Tables
+
+When Liquibase is run for the first time against a database, it creates two tables that it uses to track changes. The tables are: `DATABASECHANGELOG` and `DATABASECHANGELOGLOCK`. The names are configurable. A detailed description of the tables and their fields are as follows - 
+
+1. **DATABASECHANGELOGLOCK**: This table is used to prevent multiple instances of Liquibase from executing concurrently on the same database. The table contains a single row and two columns, ID and LOCKED. The ID is always 1, and the LOCKED column is a boolean (1 or 0) representing whether the database is currently locked. When Liquibase starts executing changes, it first locks the database by setting LOCKED to 1. When it finishes, it unlocks the database by setting LOCKED back to 0.
+2. **DATABASECHANGELOG**: This table contains a record of all the changesets that have been run against the database. Each changeset corresponds to a row in the table. Here are the key columns in this table:
+
+   - **ID**: The ID of the changeset.
+   - **AUTHOR**: The author of the changeset.
+   - **FILENAME**: The file that contains the changeset.
+   - **DATEEXECUTED**: The date and time when the changeset was executed.
+   - **ORDEREXECUTED**: The order in which the changeset was executed relative to other changesets.
+   - **EXECTYPE**: How the changeset was executed. Possible values include EXECUTED (the changeset was executed normally), FAILED (the changeset failed to execute), SKIPPED (the changeset was skipped), etc.
+   - **MD5SUM**: A checksum of the changeset used to detect whether the changeset has changed since it was run.
+   - **DESCRIPTION**: A textual description of the changeset.
+   - **COMMENTS**: Any comments provided with the changeset.
+   - **TAG**: A tag applied to the changeset (if any).
+   - **LIQUIBASE**: The version of Liquibase that executed the changeset.
