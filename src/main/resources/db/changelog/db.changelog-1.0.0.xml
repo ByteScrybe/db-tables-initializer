@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="1.0.0-1" author="Aditya">
+        <comment>Creates the USER table</comment>
+        <sqlFile path="classpath:/db/sql/1.0.0/create-table-user.sql" relativeToChangelogFile="false" />
+    </changeSet>
+
+    <changeSet id="1.0.0-2" author="Aditya">
+        <comment>Creates the REVIEW table</comment>
+        <sqlFile path="classpath:/db/sql/1.0.0/create-table-review.sql" relativeToChangelogFile="false" />
+    </changeSet>
+
+    <changeSet id="1.0.0-3" author="Aditya">
+        <comment>Creates the COUPON table</comment>
+        <sqlFile path="classpath:/db/sql/1.0.0/create-table-coupon.sql" relativeToChangelogFile="false" />
+    </changeSet>
+
+    <changeSet id="1.0.0-4" author="Aditya">
+        <comment>Creates the BOARD table</comment>
+        <sqlFile path="classpath:/db/sql/1.0.0/create-table-board.sql" relativeToChangelogFile="false" />
+    </changeSet>
+
+    <changeSet id="1.0.0-5" author="Aditya">
+        <comment>Creates the TUTOR table</comment>
+        <sqlFile path="classpath:/db/sql/1.0.0/create-table-tutor.sql" relativeToChangelogFile="false" />
+    </changeSet>
+
+    <changeSet id="1.0.0-6" author="Aditya">
+        <comment>Creates the AVAILABILITY table</comment>
+        <sqlFile path="classpath:/db/sql/1.0.0/create-table-availability.sql" relativeToChangelogFile="false" />
+    </changeSet>
+
+    <changeSet id="1.0.0-7" author="Aditya">
+        <comment>Creates the STUDENT table</comment>
+        <sqlFile path="classpath:/db/sql/1.0.0/create-table-student.sql" relativeToChangelogFile="false" />
+    </changeSet>
+
+    <changeSet id="1.0.0-8" author="Aditya">
+        <comment>Creates the COURSE table</comment>
+        <sqlFile path="classpath:/db/sql/1.0.0/create-table-course.sql" relativeToChangelogFile="false" />
+    </changeSet>
+
+    <changeSet id="1.0.0-9" author="Aditya">
+        <comment>Creates the TUTOR_FEEDBACK table</comment>
+        <sqlFile path="classpath:/db/sql/1.0.0/create-table-tutor-feedback.sql" relativeToChangelogFile="false" />
+    </changeSet>
+
+    <changeSet id="1.0.0-10" author="Aditya">
+        <comment>Creates the ENROLLMENT table</comment>
+        <sqlFile path="classpath:/db/sql/1.0.0/create-table-enrollment.sql" relativeToChangelogFile="false" />
+    </changeSet>
+
+    <changeSet id="1.0.0-11" author="Aditya">
+        <comment>Creates the PAYMENT table</comment>
+        <sqlFile path="classpath:/db/sql/1.0.0/create-table-payment.sql" relativeToChangelogFile="false" />
+    </changeSet>
+
+    <changeSet id="1.0.0-12" author="Aditya">
+        <comment>Creates the CHAPTER table</comment>
+        <sqlFile path="classpath:/db/sql/1.0.0/create-table-chapter.sql" relativeToChangelogFile="false" />
+    </changeSet>
+
+    <changeSet id="1.0.0-13" author="Aditya">
+        <comment>Creates the FORUM_TOPIC table</comment>
+        <sqlFile path="classpath:/db/sql/1.0.0/create-table-forum-topic.sql" relativeToChangelogFile="false" />
+    </changeSet>
+
+    <changeSet id="1.0.0-14" author="Aditya">
+        <comment>Creates the PRICE_HISTORY table</comment>
+        <sqlFile path="classpath:/db/sql/1.0.0/create-table-price-history.sql" relativeToChangelogFile="false" />
+    </changeSet>
+
+    <changeSet id="1.0.0-15" author="Aditya">
+        <comment>Creates the ANNOUNCEMENT table</comment>
+        <sqlFile path="classpath:/db/sql/1.0.0/create-table-announcement.sql" relativeToChangelogFile="false" />
+    </changeSet>
+
+    <changeSet id="1.0.0-16" author="Aditya">
+        <comment>Creates the SESSION table</comment>
+        <sqlFile path="classpath:/db/sql/1.0.0/create-table-session.sql" relativeToChangelogFile="false" />
+    </changeSet>
+
+</databaseChangeLog>

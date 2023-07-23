@@ -1,0 +1,20 @@
+server:
+  port: 9696
+
+spring:
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+
+  liquibase:
+    enabled: true
+    default-schema: test
+    change-log: classpath:db/changelog/db.changelog-master.xml
+    database-change-log-table: DB_CHANGE_LOG
+    database-change-log-lock-table: DB_CHANGE_LOG_LOCK
