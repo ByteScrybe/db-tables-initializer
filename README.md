@@ -1,3 +1,7 @@
+## Build Status
+
+![Build badge](https://github.com/ByteScrybe/db-tables-initializer/actions/workflows/build.yml/badge.svg)
+
 ## Liquibase Versioning Strategy
 
 This project is a sample project to demonstrate how to use Liquibase to manage database changes. The project is a simple Spring Boot application entities, that are persisted to a database. The project uses Liquibase to manage the database changes.
