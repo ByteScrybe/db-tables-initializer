@@ -1,4 +1,4 @@
-name: DB Tables Initializer
+name: build
 run-name: ${{ github.actor }} is running GitHub Actions 🚀
 on: [push]
 jobs:
