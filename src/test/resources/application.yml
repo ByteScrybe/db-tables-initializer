@@ -1,0 +1,22 @@
+server:
+  port: 9696
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:TEST;DB_CLOSE_DELAY=-1;NON_KEYWORDS=KEY,VALUE;INIT=CREATE SCHEMA IF NOT EXISTS TEST;MODE=MYSQL
+    username: sa
+    password: sa
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+
+  liquibase:
+    enabled: true
+    default-schema: test
+    change-log: classpath:db/changelog/db.changelog-master.xml
+    database-change-log-table: DB_CHANGE_LOG
+    database-change-log-lock-table: DB_CHANGE_LOG_LOCK
