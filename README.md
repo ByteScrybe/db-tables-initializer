@@ -1,6 +1,6 @@
 ## Build Status
 
-![Build badge](https://github.com/ByteScrybe/db-tables-initializer/actions/workflows/build.yml/badge.svg)
+![Build badge](https://github.com/ByteScrybe/db-tables-initializer/actions/workflows/github-actions.yml/badge.svg)
 
 ## Liquibase Versioning Strategy
 
